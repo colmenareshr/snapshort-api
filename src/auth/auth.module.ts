@@ -8,7 +8,7 @@ import { JwtStrategy } from './strategy'
   imports: [
     JwtModule.register({
       secret: 'secret',
-      signOptions: { expiresIn: '1d' }, // 有效期为
+      signOptions: { expiresIn: '1d' },
     }),
   ],
   controllers: [AuthController],

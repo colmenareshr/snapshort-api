@@ -47,7 +47,7 @@ export class AuthService {
 
     //compare password
     const valid = await argon.verify(user.hash, dto.password)
-    //if password incorrecto throw exception
+    //if password incorrect throw exception
     if (!valid) throw new ForbiddenException('Password incorrect')
 
     return this.signToken(user.id, user.email)
